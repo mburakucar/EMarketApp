@@ -37,7 +37,11 @@ export const handleGetData = (data) => {
         }
       })
       .catch((err) => {
-        reject(err);
+        if (err.toString().includes("404")) {
+          resolve([]);
+        } else {
+          reject(err);
+        }
       });
   });
 };
@@ -54,7 +58,11 @@ export const handleGetFilters = (data) => {
         }
       })
       .catch((err) => {
-        reject(err);
+        if (err.toString().includes("404")) {
+          resolve([]);
+        } else {
+          reject(err);
+        }
       });
   });
 };

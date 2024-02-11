@@ -13,6 +13,7 @@ function* getData({ payload }) {
   try {
     const data = yield handleGetData(payload);
     if (!data) {
+      console.log("error");
       yield put(setLoading(false));
     } else {
       yield put(setData(data));
