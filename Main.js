@@ -8,7 +8,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { setFavorites, setCart } from "@redux/Market/marketActions";
 import { useDispatch } from "react-redux";
 
-export default function App() {
+export default function Main() {
   const dispatch = useDispatch();
 
   useEffect(() => {
